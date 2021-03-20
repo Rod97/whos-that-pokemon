@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+<style>
+    .center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+    }
+</style>
+
+<head>
+    <script src="pokemon.js"></script>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1" />
+    <!--Specifying character set for html. can be changed to accomodate different characters-->
+    <title>Who's That Pokémon?</title>
+</head>
+
+<body onload="newPokemon()">
+
+    <div class="row" style="background-color: #0064ae;">
+        <div class="col-md-3" style="background-color:#f7c505; border: 10px solid #0064ae;">
+        <p id="trackCorrect">Correct: 0</p>
+        </div>
+        <div class="col-md-6">
+            <div class="row">
+                <img class="center" src="https://fontmeme.com/permalink/210320/213238b7d329a1e9000286ab1631e0bf.png"
+                    alt="pokemon-font" border="0">
+            </div>
+            <div>
+                <p id="pokemonSprite"></p>
+            </div>
+
+            <div class="row" style="background-color:#f7c505; border: 10px solid #0064ae;">
+                <input class="center" style="width: 30%" type="text" id="userGuess" />
+            </div>
+            <div class="row">
+                <div class="col-md-3" style="background-color:#f7c505; border-bottom: 10px solid #0064ae;"></div>
+                <div class="col-md-6" style = "background-color: #f7c505; border-bottom: 10px solid #0064ae;">
+                    <button class="btn btn-dark btn-sm" style="padding:1px 12px" id="submitGuess"  onclick="verifyGuess(newPokemon)">Guess</button>
+                    <button class="btn btn-danger btn-sm" style="padding:1px 12px;" id="nextPokemon" onclick="newPokemon()">Pass</button>
+                </div>
+                <div class="col-md-3" style="background-color:#f7c505; border-bottom: 10px solid #0064ae;"></div>
+
+            </div>
+        </div>
+        <div class="col-md-3" style="background-color:#f7c505; border: 10px solid #0064ae;"></div>
+    </div>
+
+</body>
+
+</html>
